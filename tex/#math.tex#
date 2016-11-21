@@ -1,0 +1,111 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\newcommand{\T}{\mathcal{T}}
+\renewcommand{\v}{\vec}
+\begin{document}
+The obstacle problem introduced is to find $u\in K$ such that
+\begin{equation}
+  \label{eq:obprob}
+a(u,v-u)\ge (f,v-f)_\Omega\quad \forall v\in K, 
+\end{equation}
+where 
+\[K=\{v \in H^1_0(\Omega)| v\ge \phi a.e in \Omega.\]
+
+Here $K$ is a closed and convex admissible set of functions and 
+\[a(u,v)=\int_\Omega \nabla u \cdot \nabla v\] 
+and
+\[(u,v)_\Omega=\int_\Omega uv.\]
+ 
+
+Introduce the functional 
+\[E(u)=\frac{1}{2}a(u,u)-(f,u)_\Omega.\]
+We can see that \eqref{eq:obprob} is equivalent to finding 
+\begin{equation}
+  \label{eq:minprob}
+  u=\text{argmin}_{v\in K} E(v).
+\end{equation}
+
+To see this, consider the Gateaux derivative of $E$ in the
+direction of $v$.  We can see that
+\begin{align}
+  \label{eq:GateauxDeriv}
+  &\lim_{t\rightarrow
+    0}\frac{E(u+t(v-u))-E(u)}{t}\\
+&\quad=\lim_{t\rightarrow
+  0}\frac{1/2 a(u+t(v-u),u+t(v-u))-(f,u+t(v-u))-1/2 a(u,u)+(f,u)}{t}\\
+&\quad=\lim_{t\rightarrow0}
+ \bigg\{1/2\bigg[a(u,u)+ta(v-u,u)+ta(v-u,u)+t^2a(v-u,v-u)\bigg]\\
+&\qquad -(f,u)-t(f,v-u)-1/2a(u,u)+(f,u)\bigg\}/t\\
+&\quad=\lim_{t\rightarrow
+  0}1/2\bigg(a(v-u,u)+a(v-u,u)+ta(v-u,v-u)\bigg)-(f,v-u)\\
+&\quad=a(u,v-u)-(f,v-u).
+\end{align}
+
+Thus we see that requiring the directional derivative of $E$ at $u$ to
+be positive in every possible direction is equivalent to requiring
+\eqref{eq:obprob}.
+
+It is not difficult to check that if $u\in H^2$ then $u$ will satisfy
+
+\begin{equation}
+  \label{eq:classical-formulation}
+  -\Delta u \geq f,\,u\geq \phi,\, (-\Delta u -
+  f)(u-\phi)=0,\text{a.e. in } \Omega.
+\end{equation}
+
+
+The natural thing to do for a finite element method is to choose
+$K_h\subset K$, and define the numerical solution $u_h$ to be
+\[u_h=\text{argmin}_{v_h\in K_h}E(v_h).\]
+
+For the linear finite element method we choose a mesh $\mathcal{T}$
+and define  
+\[K_h^1=\{v\in H^1_0(\Omega)| v(x_i)\geq \phi(x_i) \text{ at every
+  node } x_i \text{ of } \mathcal{T} \text{ and } v|_T\in P_1(T)
+\forall T\in \mathcal{T}\}.\]
+
+Suppose that $u_h,v_h\in K_h \subset K$ and that $K$ has basis
+$\Phi=\{\phi_i\}_{i=1}^N$.  We have in mind further that $\Phi$ is a
+typical finite element basis.  That is, each $\phi_i$ is supported on
+only a few triangles $T$ of the mesh $\mathcal{T}$ and there exists a
+set of nodes $X=\{x_i\}_{i=1}^N$ such that $\phi_i(x_j)=\delta_{ij}$. 
+
+Given a triangle $T\in \T$ let $X(T)$ be the nodes that lie in $T$. 
+
+Now we may express 
+\begin{align}
+  &\int_\Omega \nabla u_h\cdot \nabla v_h=\sum_{T\in\T}\int_T\nabla
+  u_h\cdot \nabla v_h=\sum_{T \in \T} \int_T \nabla \left(\sum_{i=1}^N
+  u_{h,i}\phi_i\right) \cdot \left(\nabla \sum_{j=1}^N v_{h,j}\phi_j\right)\\
+  &\quad=\sum_{T\in \T} \int_T \sum_{i=1}^N u_{h,i}\nabla \phi_i \cdot
+  \sum_{j=1}^N v_{h,j}\nabla \phi_j.
+\end{align}
+
+Now assuming $\nabla \phi_i=0$ if $i\notin X(T)$ we have
+\begin{align}
+  &=\sum_{T\in \T}\int_T\sum_{i,j\in X(T)}u_{h,i}v_{h,j}\nabla \phi_i
+  \cdot \nabla \phi_j=\sum_{T\in\T}\sum_{i,j\in
+    X(T)}u_{h,i}v_{h_j}\int_T \nabla \phi_i\cdot \nabla\phi_j.
+\end{align}
+
+Assume all the normal reference element stuff.  Then
+\begin{align*}
+&\partial_p\left(\phi_i(x)\right)=\partial_p\left(\hat{\phi}_i\circ T^{k^{-1}}(x)\right)\\
+&\quad=\partial_1\hat{\phi}_i(T^{k^{-1}}(x))\partial_pT^{k^{-1}}_1(x)+\partial_2\hat{\phi}_2(T^{k^{-1}}(x))\partial_pT^{k^{-1}}_2(x).
+\end{align*}
+
+Now, for any function $v$ defined on $T$, define 
+\[\v v=[v(x_{l_1}),v(x_{l_2})\dots,v(x_{l_M})]\]
+where $M$ is the number of nodes lying in $T$ (corresponding to the
+degree of the FEM method).  Then
+\[\partial_p v(x)=\sum_{i=1}^Mv_i\partial_p\phi_i(x)=D_p(x) \v v\]
+where
+\begin{align*}
+&D_p(x)=[\partial_p\phi_1(x),\partial_p\phi_2(x),\dots,\partial_p\phi_M(x)]\\
+&\quad =\left(\partial_pT^{k^{-1}}\right)^T[\nabla \hat{\phi}_1(x)|\nabla\hat{\phi}_2(x)|\dots|\nabla\hat{\phi}_M(x)].
+\end{align*}
+
+
+
+\end{document}

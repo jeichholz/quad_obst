@@ -1,0 +1,196 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+# java.lang.OutOfMemoryError: Cannot create GC thread. Out of system resources.
+#
+#  Internal Error (gcTaskThread.cpp:38), pid=2967, tid=140161691633408
+#  Error: Cannot create GC thread. Out of system resources.
+#
+# JRE version: 6.0_17-b04
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (14.3-b01 mixed mode linux-amd64 )
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f79e8008000):  JavaThread "Unknown thread" [_thread_in_vm, id=2968, stack(0x00007f79efc74000,0x00007f79efd75000)]
+
+Stack: [0x00007f79efc74000,0x00007f79efd75000],  sp=0x00007f79efd737d0,  free space=1021k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0x6bd1ef]
+V  [libjvm.so+0x2be6c8]
+V  [libjvm.so+0x33a2fd]
+V  [libjvm.so+0x338e3e]
+V  [libjvm.so+0x338bd3]
+V  [libjvm.so+0x5a87c7]
+V  [libjvm.so+0x697695]
+V  [libjvm.so+0x69732a]
+V  [libjvm.so+0x377cd0]
+V  [libjvm.so+0x67f5af]
+V  [libjvm.so+0x3def30]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x00007f79e8008000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=2968, stack(0x00007f79efc74000,0x00007f79efd75000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Dynamic libraries:
+40000000-40009000 r-xp 00000000 08:05 6691914                            /opt/MATLAB/R2013a/sys/java/jre/glnxa64/jre/bin/java
+40108000-4010a000 rwxp 00008000 08:05 6691914                            /opt/MATLAB/R2013a/sys/java/jre/glnxa64/jre/bin/java
+41ddc000-41dfd000 rwxp 00000000 00:00 0                                  [heap]
+7f78d4000000-7f78d4021000 rwxp 00000000 00:00 0 
+7f78d4021000-7f78d8000000 ---p 00000000 00:00 0 
+7f78dc000000-7f78dc021000 rwxp 00000000 00:00 0 
+7f78dc021000-7f78e0000000 ---p 00000000 00:00 0 
+7f78e3cfd000-7f78e3cfe000 ---p 00000000 00:00 0 
+7f78e3cfe000-7f78e3dfe000 rwxp 00000000 00:00 0 
+7f78e3dfe000-7f78e3dff000 ---p 00000000 00:00 0 
+7f78e3dff000-7f78e3eff000 rwxp 00000000 00:00 0                          [stack:2971]
+7f78e3eff000-7f78e3f00000 ---p 00000000 00:00 0 
+7f78e3f00000-7f78e4000000 rwxp 00000000 00:00 0                          [stack:2970]
+7f78e4000000-7f78e4021000 rwxp 00000000 00:00 0 
+7f78e4021000-7f78e8000000 ---p 00000000 00:00 0 
+7f78e80d1000-7f78e8125000 rwxp 00000000 00:00 0 
+7f78e8125000-7f78e8606000 rwxp 00000000 00:00 0 
+7f78e8606000-7f78e8611000 rwxp 00000000 00:00 0 
+7f78e8611000-7f78e8630000 rwxp 00000000 00:00 0 
+7f78e8630000-7f78e8684000 rwxp 00000000 00:00 0 
+7f78e8684000-7f78e8b64000 rwxp 00000000 00:00 0 
+7f78e8b64000-7f78e8b8f000 rwxp 00000000 00:00 0 
+7f78e8b8f000-7f78e8dff000 rwxp 00000000 00:00 0 
+7f78e8dff000-7f78ea2c0000 rwxp 00000000 00:00 0 
+7f78ea2c0000-7f78ee200000 rwxp 00000000 00:00 0 
+7f78ee200000-7f78f88a0000 rwxp 00000000 00:00 0 
+7f78f88a0000-7f7994b60000 rwxp 00000000 00:00 0 
+7f7994b60000-7f7999ea0000 rwxp 00000000 00:00 0 
+7f7999ea0000-7f79e8021000 rwxp 00000000 00:00 0 
+7f79e8021000-7f79ec000000 ---p 00000000 00:00 0 
+7f79ec0bf000-7f79ec0c0000 ---p 00000000 00:00 0 
+7f79ec0c0000-7f79ec1cb000 rwxp 00000000 00:00 0                          [stack:2969]
+7f79ec1cb000-7f79ec1ea000 rwxp 00000000 00:00 0 
+7f79ec1ea000-7f79ec45a000 rwxp 00000000 00:00 0 
+7f79ec45a000-7f79ef1ea000 rwxp 00000000 00:00 0 
+7f79ef1ea000-7f79ef1f8000 r-xp 00000000 08:05 6691307                    /opt/MATLAB/R2013a/sys/java/jre/glnxa64/jre/lib/amd64/libzip.so
+7f79ef1f8000-7f79ef2fa000 ---p 0000e000 08:05 6691307                    /opt/MATLAB/R2013a/sys/java/jre/glnxa64/jre/lib/amd64/libzip.so
+7f79ef2fa000-7f79ef2fd000 rwxp 00010000 08:05 6691307                    /opt/MATLAB/R2013a/sys/java/jre/glnxa64/jre/lib/amd64/libzip.so
+7f79ef2fd000-7f79ef2fe000 rwxp 00000000 00:00 0 
+7f79ef2fe000-7f79ef309000 r-xp 00000000 08:05 3546499                    /usr/lib64/libnss_files-2.18.so
+7f79ef309000-7f79ef508000 ---p 0000b000 08:05 3546499                    /usr/lib64/libnss_files-2.18.so
+7f79ef508000-7f79ef509000 r-xp 0000a000 08:05 3546499                    /usr/lib64/libnss_files-2.18.so
+7f79ef509000-7f79ef50a000 rwxp 0000b000 08:05 3546499                    /usr/lib64/libnss_files-2.18.so
+7f79ef50a000-7f79ef511000 r-xp 00000000 08:05 6691305                    /opt/MATLAB/R2013a/sys/java/jre/glnxa64/jre/lib/amd64/native_threads/libhpi.so
+7f79ef511000-7f79ef612000 ---p 00007000 08:05 6691305                    /opt/MATLAB/R2013a/sys/java/jre/glnxa64/jre/lib/amd64/native_threads/libhpi.so
+7f79ef612000-7f79ef614000 rwxp 00008000 08:05 6691305                    /opt/MATLAB/R2013a/sys/java/jre/glnxa64/jre/lib/amd64/native_threads/libhpi.so
+7f79ef614000-7f79ef615000 rwxp 00000000 00:00 0 
+7f79ef615000-7f79ef62b000 r-xp 00000000 08:05 3546435                    /usr/lib64/libnsl-2.18.so
+7f79ef62b000-7f79ef82a000 ---p 00016000 08:05 3546435                    /usr/lib64/libnsl-2.18.so
+7f79ef82a000-7f79ef82b000 r-xp 00015000 08:05 3546435                    /usr/lib64/libnsl-2.18.so
+7f79ef82b000-7f79ef82c000 rwxp 00016000 08:05 3546435                    /usr/lib64/libnsl-2.18.so
+7f79ef82c000-7f79ef82e000 rwxp 00000000 00:00 0 
+7f79ef82e000-7f79ef857000 r-xp 00000000 08:05 6691310                    /opt/MATLAB/R2013a/sys/java/jre/glnxa64/jre/lib/amd64/libjava.so
+7f79ef857000-7f79ef956000 ---p 00029000 08:05 6691310                    /opt/MATLAB/R2013a/sys/java/jre/glnxa64/jre/lib/amd64/libjava.so
+7f79ef956000-7f79ef95d000 rwxp 00028000 08:05 6691310                    /opt/MATLAB/R2013a/sys/java/jre/glnxa64/jre/lib/amd64/libjava.so
+7f79ef95d000-7f79ef96a000 r-xp 00000000 08:05 6691319                    /opt/MATLAB/R2013a/sys/java/jre/glnxa64/jre/lib/amd64/libverify.so
+7f79ef96a000-7f79efa69000 ---p 0000d000 08:05 6691319                    /opt/MATLAB/R2013a/sys/java/jre/glnxa64/jre/lib/amd64/libverify.so
+7f79efa69000-7f79efa6c000 rwxp 0000c000 08:05 6691319                    /opt/MATLAB/R2013a/sys/java/jre/glnxa64/jre/lib/amd64/libverify.so
+7f79efa6c000-7f79efa73000 r-xp 00000000 08:05 3546603                    /usr/lib64/librt-2.18.so
+7f79efa73000-7f79efc72000 ---p 00007000 08:05 3546603                    /usr/lib64/librt-2.18.so
+7f79efc72000-7f79efc73000 r-xp 00006000 08:05 3546603                    /usr/lib64/librt-2.18.so
+7f79efc73000-7f79efc74000 rwxp 00007000 08:05 3546603                    /usr/lib64/librt-2.18.so
+7f79efc74000-7f79efc77000 ---p 00000000 00:00 0 
+7f79efc77000-7f79efd75000 rwxp 00000000 00:00 0                          [stack:2968]
+7f79efd75000-7f79efe7a000 r-xp 00000000 08:05 3546125                    /usr/lib64/libm-2.18.so
+7f79efe7a000-7f79f007a000 ---p 00105000 08:05 3546125                    /usr/lib64/libm-2.18.so
+7f79f007a000-7f79f007b000 r-xp 00105000 08:05 3546125                    /usr/lib64/libm-2.18.so
+7f79f007b000-7f79f007c000 rwxp 00106000 08:05 3546125                    /usr/lib64/libm-2.18.so
+7f79f007c000-7f79f07da000 r-xp 00000000 08:05 6691331                    /opt/MATLAB/R2013a/sys/java/jre/glnxa64/jre/lib/amd64/server/libjvm.so
+7f79f07da000-7f79f08d9000 ---p 0075e000 08:05 6691331                    /opt/MATLAB/R2013a/sys/java/jre/glnxa64/jre/lib/amd64/server/libjvm.so
+7f79f08d9000-7f79f0a51000 rwxp 0075d000 08:05 6691331                    /opt/MATLAB/R2013a/sys/java/jre/glnxa64/jre/lib/amd64/server/libjvm.so
+7f79f0a51000-7f79f0a8f000 rwxp 00000000 00:00 0 
+7f79f0a8f000-7f79f0c43000 r-xp 00000000 08:05 3546012                    /usr/lib64/libc-2.18.so
+7f79f0c43000-7f79f0e42000 ---p 001b4000 08:05 3546012                    /usr/lib64/libc-2.18.so
+7f79f0e42000-7f79f0e46000 r-xp 001b3000 08:05 3546012                    /usr/lib64/libc-2.18.so
+7f79f0e46000-7f79f0e48000 rwxp 001b7000 08:05 3546012                    /usr/lib64/libc-2.18.so
+7f79f0e48000-7f79f0e4d000 rwxp 00000000 00:00 0 
+7f79f0e4d000-7f79f0e50000 r-xp 00000000 08:05 3546102                    /usr/lib64/libdl-2.18.so
+7f79f0e50000-7f79f104f000 ---p 00003000 08:05 3546102                    /usr/lib64/libdl-2.18.so
+7f79f104f000-7f79f1050000 r-xp 00002000 08:05 3546102                    /usr/lib64/libdl-2.18.so
+7f79f1050000-7f79f1051000 rwxp 00003000 08:05 3546102                    /usr/lib64/libdl-2.18.so
+7f79f1051000-7f79f1069000 r-xp 00000000 08:05 3546503                    /usr/lib64/libpthread-2.18.so
+7f79f1069000-7f79f1268000 ---p 00018000 08:05 3546503                    /usr/lib64/libpthread-2.18.so
+7f79f1268000-7f79f1269000 r-xp 00017000 08:05 3546503                    /usr/lib64/libpthread-2.18.so
+7f79f1269000-7f79f126a000 rwxp 00018000 08:05 3546503                    /usr/lib64/libpthread-2.18.so
+7f79f126a000-7f79f126e000 rwxp 00000000 00:00 0 
+7f79f126e000-7f79f128e000 r-xp 00000000 08:05 3539641                    /usr/lib64/ld-2.18.so
+7f79f12a2000-7f79f12ac000 rwxp 00000000 00:00 0 
+7f79f12ac000-7f79f1362000 rwxp 00000000 00:00 0 
+7f79f1362000-7f79f1366000 rwxp 00000000 00:00 0 
+7f79f1366000-7f79f136d000 r-xp 00000000 08:05 6691353                    /opt/MATLAB/R2013a/sys/java/jre/glnxa64/jre/lib/amd64/jli/libjli.so
+7f79f136d000-7f79f146e000 ---p 00007000 08:05 6691353                    /opt/MATLAB/R2013a/sys/java/jre/glnxa64/jre/lib/amd64/jli/libjli.so
+7f79f146e000-7f79f1470000 rwxp 00008000 08:05 6691353                    /opt/MATLAB/R2013a/sys/java/jre/glnxa64/jre/lib/amd64/jli/libjli.so
+7f79f1470000-7f79f1471000 rwxp 00000000 00:00 0 
+7f79f1482000-7f79f148a000 rwxs 00000000 00:24 7667909                    /tmp/hsperfdata_joe/2967
+7f79f148a000-7f79f148b000 rwxp 00000000 00:00 0 
+7f79f148b000-7f79f148c000 r-xp 00000000 00:00 0 
+7f79f148c000-7f79f148d000 rwxp 00000000 00:00 0 
+7f79f148d000-7f79f148e000 r-xp 0001f000 08:05 3539641                    /usr/lib64/ld-2.18.so
+7f79f148e000-7f79f148f000 rwxp 00020000 08:05 3539641                    /usr/lib64/ld-2.18.so
+7f79f148f000-7f79f1490000 rwxp 00000000 00:00 0 
+7ffff8d9e000-7ffff8dc0000 rwxp 00000000 00:00 0                          [stack]
+7ffff8dfc000-7ffff8dfe000 r--p 00000000 00:00 0                          [vvar]
+7ffff8dfe000-7ffff8e00000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+java_command: com.mathworks.fatalexit.FatalExitFrame /home/joe/matlab_crash_dump.2657-1 -lucky
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/home/joe/.local/bin:/home/joe/bin:/home/joe/.local/bin:/home/joe/bin:/usr/lib64/qt-3.3/bin:/bin:/usr/bin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin
+LD_LIBRARY_PATH=/opt/MATLAB/R2013a/sys/java/jre/glnxa64/jre/lib/amd64/server:/opt/MATLAB/R2013a/sys/java/jre/glnxa64/jre/lib/amd64:/opt/MATLAB/R2013a/sys/java/jre/glnxa64/jre/../lib/amd64:/opt/MATLAB/R2013a/sys/os/glnxa64:/opt/MATLAB/R2013a/bin/glnxa64:/opt/MATLAB/R2013a/extern/lib/glnxa64:/opt/MATLAB/R2013a/runtime/glnxa64:/opt/MATLAB/R2013a/sys/java/jre/glnxa64/jre/lib/amd64/native_threads:/opt/MATLAB/R2013a/sys/java/jre/glnxa64/jre/lib/amd64/server:/opt/MATLAB/R2013a/sys/java/jre/glnxa64/jre/lib/amd64
+SHELL=/bin/bash
+DISPLAY=:11.0
+ARCH=glnxa64
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x6bddc0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGBUS: [libjvm.so+0x6bddc0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGFPE: [libjvm.so+0x594f90], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGPIPE: [libjvm.so+0x594f90], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGXFSZ: [libjvm.so+0x594f90], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGILL: [libjvm.so+0x594f90], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGUSR1: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR2: [libjvm.so+0x597750], sa_mask[0]=0x08080402, sa_flags=0x10000004
+SIGHUP: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGINT: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGTERM: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGQUIT: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+
+
+---------------  S Y S T E M  ---------------
+
+OS:Fedora release 20 (Heisenbug)
+
+uname:Linux 3.17.3-200.fc20.x86_64 #1 SMP Fri Nov 14 19:45:42 UTC 2014 x86_64
+libc:glibc 2.18 NPTL 2.18 
+rlimit: STACK 8192k, CORE 0k, NPROC 1024, NOFILE 4096, AS infinity
+load average:3.71 3.31 3.05
+
+CPU:total 8 (8 cores per cpu, 2 threads per core) family 6 model 58 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, ht
+
+Memory: 4k page, physical 16375568k(166696k free), swap 8200188k(8200188k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (14.3-b01) for linux-amd64 JRE (1.6.0_17-b04), built on Oct 11 2009 01:08:48 by "java_re" with gcc 3.2.2 (SuSE Linux)
+
+time: Mon Dec  1 19:39:25 2014
+elapsed time: 0 seconds
+

@@ -1,9 +1,9 @@
-## quad_obst
+# quad_obst
 
 
 This is the code for the quadratic obstacle project. This is the version of the code basically as I found it on 11/18/2016.  The directory structure is a mess, and I have no idea how it works, but it seems to run. 
 
-# Usage
+## Usage
 This code relies on the Python flavor of [FEniCS](http://www.fenicsproject.org), a library for expiditing development of code for numericla PDE.
 FEniCS is under heavy development.  At the original development of this code, quad_obst, the best way to install FEniCS was via hashdist.  While this is still an option,
 the current best option is to use [Docker](http://www.docker.com). 
